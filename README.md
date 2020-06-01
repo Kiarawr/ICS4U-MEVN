@@ -1,4 +1,4 @@
-# mevnproject
+# mddatabase
 
 ## Project setup
 ```

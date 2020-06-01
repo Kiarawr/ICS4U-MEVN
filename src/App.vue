@@ -1,28 +1,55 @@
+//App.vue
+
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="homewrapper">
+    <div class="container">
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <router-link to="/" class="nav-link">Home</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/patients" class="nav-link">Patients</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/appointments" class="nav-link">Appointments</router-link>
+          </li>
+        </ul>
+      </nav>
+
+      <transition name="fade">
+        <router-view></router-view>
+      </transition>
+      
+    </div>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+  .container{
+    position: absolute;
+    width: 1140;
+  }
+
+  .navbar{
+    position: absolute;
+    top: 0px;
+    width: 1110px;
+    left: 0px;
+  }
+
+  #homewrapper{
+    width: 1140px;
+    height: 930px;
+    margin: 0px auto;
+    position: relative;
+    
+  }
+
 </style>
+
+<script>
+    export default{
+    }
+</script>
